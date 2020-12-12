@@ -1,24 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
+// import { Switch, Route } from 'react-router-dom';
+
+import Navigation from './components/common/Navigation';
+
+import { Search } from './containers';
+// import { BrowserRouter } from 'react-router-dom';
+
 import './App.css';
 
 function App() {
+  const [search, setSearch] = useState('');
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navigation search={search} setSearch={setSearch} />
+      {/* <div style={{ scroll: 'overflow' }}> */}
+        <Search search={search} />
+      {/* </div> */}
+      {/* <BrowserRouter>
+        <Switch>
+          <Route exact path="/" component={Search} />
+        </Switch>
+      </BrowserRouter> */}
     </div>
   );
 }
