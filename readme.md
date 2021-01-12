@@ -1,7 +1,7 @@
 # Cloud Free for all assignment report
 
 In this assignment, I have designed a Dashboard front end in React JS that is served by a serverless backend. The serverless backend uses Fire store for data storage. 
-Url: http://35.224.210.143/
+Url: http://35.202.71.144/
 What all i have implemented:
 FaaS implementation
 Front end React JS
